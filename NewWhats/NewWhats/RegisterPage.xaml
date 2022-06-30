@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NewWhats.RegisterPage">
+    <StackLayout Padding="20">
+        <Frame BackgroundColor="Aquamarine" Padding="24" CornerRadius="10">
+            <Label Text="Please, come in!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Entry x:Name="LoginEntry" Placeholder="Enter your login" FontSize="16"/>
+        <Entry x:Name="PasswordEntry" IsPassword="True" Placeholder="Enter your password" FontSize="16"/>
+        <Entry x:Name="PasswordAgain" IsPassword="True" Placeholder="Enter your password again" FontSize="16"/>
+        <Button Text="Register" Pressed="Register_Pressed" BackgroundColor="Aquamarine" CornerRadius="10" TextColor="White" FontSize="20"/>
+        <Button Text="Back" Pressed="Back_Pressed" BackgroundColor="Aquamarine" CornerRadius="10" TextColor="White" FontSize="20"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NewWhats.MainPage">
+
+    <StackLayout Padding="20" BackgroundColor="Aquamarine">
+        <Frame Padding="24" CornerRadius="10">
+            <Label Text="Our own mini-chat" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Frame BackgroundColor="White" Padding="5" CornerRadius="10">
+            <StackLayout Padding="20">
+                <Button Text="LogOut" Pressed="LogOut_Pressed" BackgroundColor="#FB6B50" HorizontalOptions="End" CornerRadius="10" TextColor="White" FontSize="20"/>
+                <Entry x:Name="MessageEntry" FontSize="16"/>
+                <Button Text="Send" Pressed="Send_Pressed" BackgroundColor="Aquamarine" CornerRadius="10" TextColor="White" FontSize="20"/>
+                <ListView x:Name="MessagesList">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <FormattedString.Spans>
+                                                <Span TextColor="{Binding Color}" Text="{Binding UserLogin}"/>
+                                                <Span TextColor="{Binding Color}" Text=": "/>
+                                                <Span TextColor="Black" Text="{Binding Text}"/>
+                                            </FormattedString.Spans>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>
